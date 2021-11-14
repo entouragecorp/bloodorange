@@ -6,12 +6,12 @@ import './Pages.scss'
 
 /**
 * @author
-* @function Watermelon
+* @function SweetSour
 **/
 
-const Watermelon = (props) => {
+const SweetSour = (props) => {
   return(
-    <div className='Prizing watermelonBg'>
+    <div className='Prizing sweetSourBg'>
 
       <div className='columns_holder'>
 
@@ -59,4 +59,4 @@ const Watermelon = (props) => {
 
  }
 
-export default Watermelon
+export default SweetSour
