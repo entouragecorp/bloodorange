@@ -1,7 +1,7 @@
 import React from 'react'
 import Next from '../Components/NextButton/Next'
 import NextGreen from '../Assets/next-green.png'
-import VapePen from '../Assets/vape-pen.svg'
+import NugPackage from '../Assets/nug-package.svg'
 import './Pages.scss'
 
 /**
@@ -19,23 +19,28 @@ const SweetSour = (props) => {
 
           <div className='shared_width'>
             <div className='info_container'>
-              <h1 className='blood_orange_h1'>BLOOD</h1>
-              <h1 className='blood_orange_h1 Title2'>ORANGE</h1>
-              <h5 className='blood_orange_h1 ROR'>1G 510 CARTRIDGE</h5>
+              <h1 className='blood_orange_h1'>SWEET &</h1>
+              <h1 className='blood_orange_h1 Title2'>SOUR SATIVA</h1>
+              <h5 className='blood_orange_h1 ROR'>¼ OUNCE READY TO ROLL</h5>
             </div>
 
             <div className='info_container'>
-              <p className='margin_zero' style={{fontSize: '13px'}}>Blood Orange by Saturday is the sweet and juicy with a tangy zip and touch of floral pine. Enjoy a crisp twist on citrus.</p>
+              <p className='margin_zero' style={{fontSize: '13px'}}>
+                Our Sweet & Sour Sativa Ready to Roll is made with milled whole flower, never shake or trim, packed with a sour punch and fruity citrus aromas.
+                <br/>
+                This fresh Sativa-dominant Hybrid cultivar is a mix of Ghost Train Haze and Ultra Sour, with very strong THC potency potential.
+                <br/>
+                Saturday Sweet & Sour Sativa Ready to Roll is where quality, convenience and value meet. A quarter ounce offering and  unbeatable bag appeal for $29.95 MSRP.</p>
             </div>
 
             <div className='info_container'>
-              <p className='margin_zero'>SATIVA</p>
-              <p className='margin_zero thin'>THC 19-25%</p>
-              <p className='margin_zero thin'>CBD 0-1%</p>
+              <p className='margin_zero'>HYBRID</p>
+              <p className='margin_zero thin'>THC 18-24%</p>
+              <p className='margin_zero thin'>CBD 0-2%</p>
             </div>
             <div className='info_container'>
               <p className='margin_zero'>AROMA & FLAVOURS</p>
-              <p className='margin_zero thin'>Sweet Citrus Fruity</p>
+              <p className='margin_zero thin'>Citrus, Sour, Fuel</p>
             </div>
 
             <div className='info_container'>
@@ -47,7 +52,7 @@ const SweetSour = (props) => {
         </div>
 
         <div class="vape_container">
-          <img id='vapePen' src={VapePen} alt='' />
+          <img id='vapePen' src={NugPackage} alt='' />
         </div>
 
       </div>

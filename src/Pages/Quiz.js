@@ -2,7 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { useHistory } from 'react-router'
 import QuizOrangeBg from './../Assets/orange-vape-bg.png'
+import QuizOrangeBg2 from './../Assets/orange-vape-bg-2.png'
 import QuizGreenBg from './../Assets/green-quiz-bg.png'
+import QuizGreenBg2 from './../Assets/green-quiz-bg-2.png'
+import QuizVapeTubeBg from './../Assets/orange-tube-bg.png'
 
 /**
 * @author
@@ -20,128 +23,133 @@ const Quiz = (props) => {
     var completed = []
     var points = 0
     var counter = 0
-    var bg_counter = 0
     const question = useRef()
     const a = useRef()
     const b = useRef()
     const c = useRef()
     const d = useRef()
+    const e = useRef()
     const bg = useRef()
+    const showA = useRef()
+    const showB = useRef()
+    const showC = useRef()
+    const showD = useRef()
+    const showE = useRef()
     const questionaire_limit = 5
     const list_of_questions = [
       {
-        question: '1. Saturday 1G Blood Orange',
+        question: '1. Saturday Sweet & Sour Sativa Ready to Roll comes in which size formats?',
         options: {
-          a: 'Is a Hybrid Offering',
-          b: 'Is an Indica',
-          c: 'Is a Sativa',
-          d: 'All the above'
+          a: '1/8 ounce (3.5g)',
+          b: '1/4 ounce (7g)',
+          c: '1/2 ounce (15g)'
         },
-        answer: 'c'
+        answer: 'c',
+        bg: `url(${QuizOrangeBg})`
       },
       {
-        question: '2. Saturday Blood Orange is priced perfectly for which on-the-go shopper?',
+        question: '2. How does Saturday prepare their Ready to Roll Dried Flower?',
         options: {
-          a: 'Price Sensitive',
-          b: 'High End',
-          c: 'Mainstream',
-          d: 'All the above'
+          a: '1,000 Employees simultaneously hand-grinding',
+          b: 'Explosive Devices',
+          c: 'Perfectly milled whole flower'
         },
-        answer: 'a'
+        answer: 'c',
+        bg: `url(${QuizGreenBg2})`
       },
       {
-        question: "3. When speaking about the 1G Blood Orange product, I'd start with:",
+        question: "3. What strains are blended to create Saturday Sweet & Sour Read to Roll?",
         options: {
-          a: 'The Brand',
-          b: 'The Value',
-          c: 'The Potency',
-          d: 'The Flavour'
+          a: 'Ghost Train Haze  x Ultra Sour',
+          b: 'Black Domina x Mango Haze',
+          c: 'Lemon Z x OG Kush'
         },
-        answer: 'd'
+        answer: 'a',
+        bg: `url(${QuizOrangeBg2})`
       },
       {
-        question: "4. Orange flavour can be difficult to nail, but Saturday's Blood Orange has done so beautifully because:",
+        question: "4. What are the two dominant flavour/aromas you can expect from Saturday Sweet & Sour?",
         options: {
-          a: "It's crafted with terpenes and other aromatic compounds native to both oranges and cannabis",
-          b: "It's all limonene, which is the only citrus aromatic you need",
-          c: "We hired the Keebler elves.",
-          d: 'All the above'
+          a: "Fruit + Fuel",
+          b: "Pepper + Citrus",
+          c: "Pine + Berry"
         },
-        answer: 'b'
+        answer: 'a',
+        bg: `url(${QuizGreenBg})`
       },
       {
-        question: '5. I’d Recommend Saturday Blood Orange to a shopper in a situation where:',
+        question: '5. Saturday Sweet & Sour Ready to Roll is the perfect mill size for:',
         options: {
-          a: 'An experienced or occasional cannabis shopper who is seeking a smooth, high-THC joint-smoking experience and values the dollars in their pocket.',
-          b: 'A shopper who is new to cannabis or is re-entering the category after many years, and is looking for a balanced offering.',
-          c: 'An experienced or occasional smoker who is looking for a tasty, high-THC experience while they’re on-the-go that won’t break the bank',
-          d: 'An occasional smoker who is looking for edibles.'
+          a: 'Rolling into a joint or a blunt',
+          b: 'Packing into a pre-roll cone',
+          c: 'Adding to a bowl or a pipe',
+          d: 'A dry herb Vaporizer',
+          e: 'All of the above'
         },
-        answer: 'c'
+        answer: 'e',
+        bg: `url(${QuizVapeTubeBg})`
       }
     ]
     const history = useHistory()
-    var set_forth_div = ['false']
 
     useEffect(() => {
         randList()
     }, [])
 
     const randList = () => {
-        gsap.to('.green_bg', {backgroundColor: '#535938', duration: 0})
-
-        if (completed.length >= questionaire_limit) {
-
-            if(points < 4){
-                localStorage.setItem('points', points)
-                history.push('/points')
-                // window.location.reload()
-            }
-            else{
-                localStorage.setItem('points', points)
-                history.push('/data-capture')
-            }
-
-        } else {
-            // Math.round(Math.random() * 4)
-            let random = counter++
-            const check_completed = completed.find(element => element == random)
-
-            // For some reason zero is being ignored. That why it's in the conditional statement below.
-            if (check_completed || check_completed === 0) {
-                randList()
-            }
-            else {
-                completed.push(random)
-                question.current.textContent = list_of_questions[random].question
-
-                bg.current.style.background = `url(${QuizOrangeBg})`
-                bg.current.style.backgroundSize = 'cover'
-                a.current.textContent = list_of_questions[random].options.a
-                b.current.textContent = list_of_questions[random].options.b
-                c.current.textContent = list_of_questions[random].options.c
-                d.current.textContent = list_of_questions[random].options.d
-            }
+      gsap.to('.green_bg', {backgroundColor: '#535938', duration: 0})
+      if (completed.length >= questionaire_limit) {
+        if(points < 4){
+          localStorage.setItem('points', points)
+          history.push('/points')
+          // window.location.reload()
         }
+        else{
+          localStorage.setItem('points', points)
+          history.push('/data-capture')
+        }
+      } else {
+        let random = counter++
+        const check_completed = completed.find(element => element == random)
+
+        // For some reason zero is being ignored. That why it's in the conditional statement below.
+        if (check_completed || check_completed === 0) {
+          randList()
+        }
+        else {
+          completed.push(random)
+          question.current.textContent = list_of_questions[random].question
+          bg.current.style.background = list_of_questions[random].bg
+          bg.current.style.backgroundSize = '100% 100%'
+
+
+          for (const key in list_of_questions[random].options) {
+            if (list_of_questions[random].options[key]) {
+              eval(key).current.textContent = list_of_questions[random].options[key]
+              eval(`show${key.toUpperCase()}`).current.className = `green_bg ${key}`
+            } else {
+              eval(`show${key.toUpperCase()}`).current.className = 'displayNone'
+            }
+          }
+        }
+      }
     }
 
-    const selected_answer = (selected_data) => {
-        gsap.to(`.${selected_data}`, {backgroundColor: '#40473F', duration: 0.5})
-        let index = completed[completed.length -1]
-        let answer = list_of_questions[index].answer
-        console.log(answer)
+    const selectved_answer = (selected_data) => {
 
-        if(selected_data === answer) {
-          // answer. in this context is referencing the consts "a" "b" "c" or "d"
-          if (answer.current) {
-            answer.current.textContent = 'Correct'; points++;  console.log(`updated points: ${points}`)
-          }
-        } else {
-          eval(selected_data).current.textContent = 'Incorrect';
-        }
-        setTimeout(()=>{
-            randList()
-        }, 1000)
+      gsap.to(`.${selected_data}`, {backgroundColor: '#40473F', duration: 0.5})
+      let index = completed[completed.length -1]
+
+      if(selected_data == list_of_questions[index].answer) {
+        eval(selected_data).current.textContent = 'Correct';
+        points++;  console.log(`updated points: ${points}`)
+      } else{
+        eval(selected_data).current.textContent = 'Incorrect';
+      }
+
+      setTimeout(()=>{
+          randList()
+      }, 1000)
     }
 
     return (
@@ -151,10 +159,11 @@ const Quiz = (props) => {
                     <h3 ref={question}></h3>
                 </div>
                 <div id='answer_list'>
-                    <div className='green_bg a' onClick={() => selected_answer('a')}><p className='ans' ref={a}></p></div>
-                    <div className='green_bg b' onClick={() => selected_answer('b')}><p className='ans' ref={b}></p></div>
-                    <div className='green_bg c' onClick={() => selected_answer('c')}><p className='ans' ref={c}></p></div>
-                    <div className={set_forth_div == 'true'?'displayNone':'green_bg d'} onClick={() => selected_answer('d')}><p className='ans' ref={d}></p></div>
+                    <div ref={showA} className='displayNone' onClick={() => selectved_answer('a')}><p className='ans' ref={a}></p></div>
+                    <div ref={showB} className='displayNone' onClick={() => selectved_answer('b')}><p className='ans' ref={b}></p></div>
+                    <div ref={showC} className='displayNone' onClick={() => selectved_answer('c')}><p className='ans' ref={c}></p></div>
+                    <div ref={showD} className='displayNone' onClick={() => selectved_answer('d')}><p className='ans' ref={d}></p></div>
+                    <div ref={showE} className='displayNone' onClick={() => selectved_answer('e')}><p className='ans' ref={e}></p></div>
                 </div>
             </div>
         </div>
