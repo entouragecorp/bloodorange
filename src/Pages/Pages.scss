@@ -107,7 +107,7 @@ $orange: #E14925;
 
 
 .sweetSourBg{
-    background: url('./../Assets/new-bg.jpg') no-repeat center center !important;
+    background: url('./../Assets/new-bg.png') no-repeat center center !important;
     background-size: 100% 100% !important;
 }
 
@@ -148,14 +148,12 @@ $orange: #E14925;
         height: auto;
         display: flex;
         flex-direction: row;
-        margin-top: 16vh;
+        margin-top: 14vh;
     }
     .shared_width{
         color: white;
-        width: calc(100% / 2);
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
         padding-left: 6%;
         z-index: 99;
 
@@ -164,15 +162,12 @@ $orange: #E14925;
             font-family: 'Oswald', sans-serif;
         }
         .info_container{
-            width: 150px;
             margin-top: 20px;
         }
     }
     .left-content{
         padding-left: 6vw;
-        // padding-top: 10vh;
-        // margin-top: 4vh;
-        width: 41vw;
+        width: 90vw;
     }
     .margin_zero{
         margin: 0px;
@@ -288,8 +283,8 @@ label{
   align-items: center;
   width: 100%;
   #vapePen{
-    margin-top: 2.5rem;
-    max-width: 150px;
+    margin-top: auto;
+    max-width: 200px;
   }
 }
 

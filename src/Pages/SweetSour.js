@@ -19,8 +19,7 @@ const SweetSour = (props) => {
 
           <div className='shared_width'>
             <div className='info_container'>
-              <h1 className='blood_orange_h1'>SWEET &</h1>
-              <h1 className='blood_orange_h1 Title2'>SOUR SATIVA</h1>
+              <h1 className='blood_orange_h1'>SWEET & <br/> SOUR SATIVA</h1>
               <h5 className='blood_orange_h1 ROR'>¼ OUNCE READY TO ROLL</h5>
             </div>
 
@@ -28,7 +27,9 @@ const SweetSour = (props) => {
               <p className='margin_zero' style={{fontSize: '13px'}}>
                 Our Sweet & Sour Sativa Ready to Roll is made with milled whole flower, never shake or trim, packed with a sour punch and fruity citrus aromas.
                 <br/>
+                <br/>
                 This fresh Sativa-dominant Hybrid cultivar is a mix of Ghost Train Haze and Ultra Sour, with very strong THC potency potential.
+                <br/>
                 <br/>
                 Saturday Sweet & Sour Sativa Ready to Roll is where quality, convenience and value meet. A quarter ounce offering and  unbeatable bag appeal for $29.95 MSRP.</p>
             </div>
