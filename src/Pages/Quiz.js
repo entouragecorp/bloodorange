@@ -35,6 +35,7 @@ const Quiz = (props) => {
     const showC = useRef()
     const showD = useRef()
     const showE = useRef()
+    const keyMap = ['a', 'b', 'c', 'd', 'e']
     const questionaire_limit = 5
     const list_of_questions = [
       {
@@ -122,15 +123,14 @@ const Quiz = (props) => {
           bg.current.style.background = list_of_questions[random].bg
           bg.current.style.backgroundSize = '100% 100%'
 
-
-          for (const key in list_of_questions[random].options) {
+          keyMap.forEach(key => {
             if (list_of_questions[random].options[key]) {
               eval(key).current.textContent = list_of_questions[random].options[key]
               eval(`show${key.toUpperCase()}`).current.className = `green_bg ${key}`
             } else {
               eval(`show${key.toUpperCase()}`).current.className = 'displayNone'
             }
-          }
+          })
         }
       }
     }
