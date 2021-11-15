@@ -2,10 +2,18 @@ $lightgreen: #535938;
 $darkgreen: #40473F;
 $orange: #E14925;
 
+html,
+body {
+  height: 100% !important;
+}
+
+html {
+  overflow-y: scroll !important;
+}
+
 .home_bg{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
     background-image: linear-gradient($lightgreen, $darkgreen);
 }
 #next_btn_holder{
@@ -14,13 +22,12 @@ $orange: #E14925;
     justify-content: center;
 }
 
-
 #landing_wrapping{
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    margin-top: 22%;
+    padding-top: 22%;
     #dob_capture{
         display: flex;
         flex-direction: column;
@@ -114,9 +121,8 @@ $orange: #E14925;
 .Prizing{
     width: 100%;
     height: 100vh;
-    overflow-y: scroll;
     background: url('./../Assets/data-capture-bg.png') no-repeat center center;
-    background-size: cover;
+    background-size: 100%;
 
     .titleContainer{
         width: auto;
@@ -148,13 +154,13 @@ $orange: #E14925;
         height: auto;
         display: flex;
         flex-direction: row;
-        margin-top: 14vh;
+        padding-top: 14vh;
     }
     .shared_width{
         color: white;
         display: flex;
         flex-direction: column;
-        padding-left: 6%;
+        // padding-left: 6%;
         z-index: 99;
 
         .thin{
@@ -167,7 +173,7 @@ $orange: #E14925;
     }
     .left-content{
         padding-left: 6vw;
-        width: 90vw;
+        width: 135vw;
     }
     .margin_zero{
         margin: 0px;
@@ -211,14 +217,14 @@ width: 100%;
     padding: 0 16px;
 }
 #quiz_holder{
-    margin-top: 22vh;
+    padding-top: 22vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #quiz_result_holder_{
-    margin-top: 25vh;
+    padding-top: 25vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -281,9 +287,10 @@ label{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 40%;
   #vapePen{
     margin-top: auto;
+    margin-left: -165px;
     max-width: 200px;
   }
 }
