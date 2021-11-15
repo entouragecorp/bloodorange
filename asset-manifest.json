@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/watermelon/static/css/main.f898e34d.chunk.css",
+    "main.js": "/watermelon/static/js/main.4320a8ab.chunk.js",
+    "main.js.map": "/watermelon/static/js/main.4320a8ab.chunk.js.map",
+    "runtime-main.js": "/watermelon/static/js/runtime-main.9739fd23.js",
+    "runtime-main.js.map": "/watermelon/static/js/runtime-main.9739fd23.js.map",
+    "static/js/2.5305b3b4.chunk.js": "/watermelon/static/js/2.5305b3b4.chunk.js",
+    "static/js/2.5305b3b4.chunk.js.map": "/watermelon/static/js/2.5305b3b4.chunk.js.map",
+    "static/js/3.ac420f8f.chunk.js": "/watermelon/static/js/3.ac420f8f.chunk.js",
+    "static/js/3.ac420f8f.chunk.js.map": "/watermelon/static/js/3.ac420f8f.chunk.js.map",
+    "index.html": "/watermelon/index.html",
+    "static/css/main.f898e34d.chunk.css.map": "/watermelon/static/css/main.f898e34d.chunk.css.map",
+    "static/js/2.5305b3b4.chunk.js.LICENSE.txt": "/watermelon/static/js/2.5305b3b4.chunk.js.LICENSE.txt",
+    "static/media/Saturday.d52f26e5.mp4": "/watermelon/static/media/Saturday.d52f26e5.mp4",
+    "static/media/Pages.scss": "/watermelon/static/media/prizingBg.87f69a67.png",
+    "static/media/green-quiz-bg-2.png": "/watermelon/static/media/green-quiz-bg-2.aa02240a.png",
+    "static/media/green-quiz-bg.png": "/watermelon/static/media/green-quiz-bg.e9ef03f6.png",
+    "static/media/guitar.53634a63.svg": "/watermelon/static/media/guitar.53634a63.svg",
+    "static/media/orange-tube-bg.png": "/watermelon/static/media/orange-tube-bg.cdd357bd.png",
+    "static/media/orange-vape-bg-2.png": "/watermelon/static/media/orange-vape-bg-2.9534499d.png",
+    "static/media/orange-vape-bg.png": "/watermelon/static/media/orange-vape-bg.f71b415d.png",
+    "static/media/orig-roomba.e30ced5a.png": "/watermelon/static/media/orig-roomba.e30ced5a.png",
+    "static/media/roomba-bg.d094d11a.png": "/watermelon/static/media/roomba-bg.d094d11a.png",
+    "static/media/sour.cbda50ee.svg": "/watermelon/static/media/sour.cbda50ee.svg",
+    "static/media/vape-pen.d018d2e7.svg": "/watermelon/static/media/vape-pen.d018d2e7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9739fd23.js",
+    "static/js/2.5305b3b4.chunk.js",
+    "static/css/main.f898e34d.chunk.css",
+    "static/js/main.4320a8ab.chunk.js"
+  ]
+}
