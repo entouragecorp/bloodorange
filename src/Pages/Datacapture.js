@@ -24,7 +24,7 @@ const Datacapture = (props) => {
       'points': points,
       ...user_metadata
       }
-    fetch("https://bottlecapdev.pythonanywhere.com/saturday", {
+    fetch("https://bottlecapdev.pythonanywhere.com/sweetsour", {
       method: "POST",
       mode: "cors",
       headers: {
